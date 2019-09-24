@@ -38,7 +38,7 @@ function plotbarchart(id) {
 }
 
 function plotbubblechart(id) {
-  d3.json("/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
     // get x y values for barchart
     samples = data.samples;
     //console.log(samples);
@@ -76,7 +76,7 @@ function plotbubblechart(id) {
 }
 
 function plotgaugechart(id) {
-  d3.json("/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
     var allinfo = data.metadata;
     //console.log(allinfo);
 
@@ -119,7 +119,7 @@ function plotgaugechart(id) {
 }
 
 function info(id){
-  d3.json("/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
   
     var allinfo = data.metadata;
     //console.log(allinfo);
@@ -136,7 +136,7 @@ function info(id){
 }
 
 // iterate through all sample ids and add them to the dropdown menu
-d3.json("/samples.json").then((data) => {
+d3.json("samples.json").then((data) => {
   sampleids = data.names;
   //console.log(sampleids);
   sampleids.forEach(id => samplelist.append("option").text(id));
