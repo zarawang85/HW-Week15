@@ -4,7 +4,7 @@ var sampleids = [];
 var samples = [];
 
 function plotbarchart(id) {
-  d3.json("/samples.json").then((data) => {
+  d3.json("samples.json").then((data) => {
     // get x y values for barchart
     samples = data.samples;
     //console.log(samples);
